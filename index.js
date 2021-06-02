@@ -3,7 +3,7 @@ const url = require('url');
 const cheerio = require('cheerio');
 const notifier = require('node-notifier');
 
-const TARGET_DATE = '17 November';
+const TARGET_DATE = '1 Juni';
 const AFTER_HOUR = 18;
 const BEFORE_HOUR = 22;
 const PEOPLE_COUNT = 1;
@@ -15,7 +15,7 @@ notifier.notify({
 });
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-const options = url.parse('https://mijn2.klim.nl/bolder/?p=50');
+const options = url.parse('https://mijn2.klim.nl/bolder/?p=56');
 options.beforeRedirect = (opts, {headers}) => {
     const cookie = headers['set-cookie'][0];
     opts.headers = {'Cookie': cookie}
